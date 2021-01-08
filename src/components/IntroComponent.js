@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron } from 'reactstrap';
 
-function Intro(props) {
+function Intro() {
     return (
         <React.Fragment>
             <Jumbotron fluid className="text-center">
