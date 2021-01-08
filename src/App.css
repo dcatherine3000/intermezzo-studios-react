@@ -23,4 +23,37 @@
   margin-bottom: 0;
 }
 
+.jumbotron {
+  height: 110vh;
+}
+
+.intro {
+  background-image: url("./img/stage.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: block;
+  width: 75%;
+  margin: auto;
+  position: relative;
+  top: 40vh;
+  padding: 1rem;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  color: white;
+  background-color:rgba(0, 0, 0, 0.75);
+}
+
+.intro p {
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
 

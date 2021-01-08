@@ -21,7 +21,7 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar dark className="bg-dark" expand="lg">
+                <Navbar dark className="bg-dark" expand="lg" fixed="top">
                     <NavbarBrand>
                         <h1 className="bg-dark">Intermezzo Studios</h1>
                     </NavbarBrand>
