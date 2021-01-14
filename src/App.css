@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-* {
+.App {
   background-color: whitesmoke;
   font-family: "Abril Fatface", cursive;
 }
@@ -12,7 +12,6 @@
 .nav-item {
   padding: 1.05rem;
   font-size: 1.3rem;
-  border: black 5px;
 }
 
 .navbar-nav {
@@ -47,13 +46,11 @@
 .intro h1 {
   font-size: 4rem;
   color: white;
-  background-color:rgba(0, 0, 0, 0.75);
 }
 
 .intro p {
   font-size: 2rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .container {
@@ -111,5 +108,9 @@ footer a:hover {
 footer hr {
   width: 50%;
   margin-top: 0;
+}
+
+.breadcrumb {
+  margin: 1rem;
 }
 

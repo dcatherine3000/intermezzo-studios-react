@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     
@@ -24,29 +24,29 @@ class Header extends Component {
             <React.Fragment>
                 <Navbar dark className="bg-dark" expand="lg" fixed="top">
                     <NavbarBrand href="/">
-                        <h1 className="bg-dark">Intermezzo Studios</h1>
+                        <h1>Intermezzo Studios</h1>
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
-                    <Collapse isOpen={this.state.isNavOpen}  className="bg-dark" navbar>
+                    <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar>
-                            <ul className="navbar-nav bg-dark">
-                                <NavItem className="bg-dark">
-                                    <NavLink className="nav-link" to="/about">
+                            <ul className="navbar-nav">
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/about'>
                                         About
                                     </NavLink>
                                 </NavItem>
-                                <NavItem className="bg-dark">
-                                    <NavLink className="nav-link" to="/events">
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/events'>
                                         Events
                                     </NavLink>
                                 </NavItem>
-                                <NavItem className="bg-dark">
-                                    <NavLink className="nav-link" to="/faq">
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/faq'>
                                         FAQ
                                     </NavLink>
                                 </NavItem>
-                                <NavItem className="bg-dark">
-                                    <NavLink className="nav-link" to="/contact">
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/contact'>
                                         Contact
                                     </NavLink>
                                 </NavItem>
