@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Container, Row, Breadcrumb, BreadcrumbItem, Table, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 function Events() {
@@ -14,6 +14,42 @@ function Events() {
                         </Breadcrumb>
                     </div>
                 </Row>
+            </Container>
+            <Container>
+                <Table striped hover>
+                    <thead>
+                        <tr>
+                            <th colSpan="6">Event Name</th>
+                            <th>Date</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colSpan="6"><strong>Elementary/Intermediate Holiday Recitals</strong></td>
+                            <td>December 12, 2020</td>
+                            <td>Free for families</td>
+                        </tr>
+                        <tr>
+                            <td colSpan="6"><strong>High School Holiday Recitals</strong></td>
+                            <td>December 13, 2020</td>
+                            <td>Free for families</td>
+                        </tr>
+                        <tr>
+                            <td colSpan="6"><strong>An Evening with Nat and Josh</strong></td>
+                            <td>December 19, 2020, 8pm</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td colSpan="6"><strong>Benson Chamber Singers Christmas Concert</strong></td>
+                            <td>December 20, 2020</td>
+                            <td>$15</td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </Container>
+            <Container id="events-button">
+                <Button dark>Questions?</Button>
             </Container>
         </div>
     );

@@ -134,3 +134,17 @@ footer hr {
 #about-content h2 {
   text-align: center;
 }
+
+.table {
+  font-size: 1.2rem;
+  margin: 2rem auto;
+}
+
+.table thead {
+  font-size: 1.5rem;
+}
+
+#events-button {
+  text-align: center;
+  margin: 5rem;
+}
