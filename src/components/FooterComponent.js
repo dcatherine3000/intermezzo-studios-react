@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -8,10 +9,10 @@ function Footer() {
                 <Row>
                     <div className="col-12 footer-nav">
                         <ul>
-                            <li>About</li>
-                            <li>Events</li>
-                            <li>FAQ</li>
-                            <li>Contact</li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/events'>Events</Link></li>
+                            <li><Link to='/faq'>FAQ</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     <hr />
                     </div>
