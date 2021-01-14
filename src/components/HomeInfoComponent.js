@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, Container, Row } from 'reactstrap';
 function RenderModel({model}) {
     return (
         <div>
-            <Card>
+            <Card className="home-card">
                 <CardImg src={model.image} alt={model.name} />
                 <CardBody>
                     <CardText>{model.description}</CardText>
