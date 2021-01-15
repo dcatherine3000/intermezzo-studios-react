@@ -8,20 +8,28 @@ import Faq from './FAQComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { MODEL } from '../shared/model';
+import { QUESTIONS } from '../shared/questions';
 
 class Main extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            model: MODEL
+            model: MODEL,
+            questions: QUESTIONS
         }
     }
 
     render() {
         const HomePage = () => {
             return (
-                <Home />
+                <Home model={this.state.model} />
+            );
+        };
+
+        const FaqPage = () => {
+            return (
+                <Faq questions={this.state.questions} />
             );
         };
 
@@ -32,7 +40,7 @@ class Main extends Component {
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/about' component={About} />
                     <Route exact path='/events' component={Events} />
-                    <Route exact path='/faq' component={Faq} />
+                    <Route exact path='/faq' component={FaqPage} />
                     <Route exact path='/contact' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>

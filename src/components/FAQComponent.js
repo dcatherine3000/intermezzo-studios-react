@@ -3,7 +3,37 @@ import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Accordion, Card, Button, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function Faq() {
+function RenderQuestions({questions}) {
+    return (
+        <div>
+            <Container>
+                <Accordion>
+                    <Card>
+                        <Card.Header className="faq-header">
+                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                            {questions.question}
+                        </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="0">
+                        <Card.Body className="faq-answer">{questions.answer}</Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                </Accordion>
+            </Container>
+        </div>
+    )
+}
+
+function Faq(props) {
+
+    const faq = props.questions.map(question => {
+        return (
+            <div key={question.id}>
+                <RenderQuestions questions={question} />
+            </div>
+        )
+    })
+
     return (
         <div>
             <Container>
@@ -16,30 +46,7 @@ function Faq() {
                     </div>
                 </Row>
             </Container>
-            <Container>
-                <Accordion defaultActiveKey="0">
-                    <Card>
-                        <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                            Click me!
-                        </Accordion.Toggle>
-                        </Card.Header>
-                        <Accordion.Collapse eventKey="0">
-                        <Card.Body>Hello! I'm the body</Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                        <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                            Click me!
-                        </Accordion.Toggle>
-                        </Card.Header>
-                        <Accordion.Collapse eventKey="1">
-                        <Card.Body>Hello! I'm another body</Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
-                </Accordion>
-            </Container>
+            {faq}
         </div>
     );
 }

@@ -73,6 +73,7 @@
 
 footer {
   text-align: center;
+  margin-top: 3rem;
 }
 
 footer ul {
@@ -147,4 +148,19 @@ footer hr {
 #events-button {
   text-align: center;
   margin: 5rem;
+}
+
+
+
+.faq-header {
+    padding: 0;
+}
+
+.faq-header button {
+    font-size: 1.25rem;
+}
+
+.faq-answer {
+    font-size: 1.2rem;
+    padding: 2rem;
 }
