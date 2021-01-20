@@ -52,7 +52,7 @@ class Contact extends Component {
         }
 
         if (this.state.touched.email && !email.includes('@')) {
-            errors.email = 'Invalid email';
+            errors.email = 'Must be a valid email address';
         }
 
         return errors;
