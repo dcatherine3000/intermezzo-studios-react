@@ -29,7 +29,7 @@ class Header extends Component {
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar>
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav ml-0 mt-2 mt-lg-0">
                                 <NavItem>
                                     <NavLink className="nav-link" to='/about'>
                                         About
