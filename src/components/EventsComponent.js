@@ -14,8 +14,6 @@ function Events() {
                         </Breadcrumb>
                     </div>
                 </Row>
-            </Container>
-            <Container>
                 <Table striped hover>
                     <thead>
                         <tr>
@@ -47,9 +45,9 @@ function Events() {
                         </tr>
                     </tbody>
                 </Table>
-            </Container>
-            <Container id="events-button">
-                <Button dark>Questions?</Button>
+                <Row id="events-button" className="btn-block text-center">
+                    <Button dark>Questions?</Button>
+                </Row>
             </Container>
         </div>
     );

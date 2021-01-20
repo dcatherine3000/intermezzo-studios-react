@@ -7,7 +7,7 @@ function Intro() {
             <Jumbotron fluid className="text-center">
                 <div className="intro">
                     <div className="text-box">
-                        <h1>Intermezzo Studios</h1>
+                        <h1>Intermezzo <strong>Studios</strong></h1>
                         <p>Educate. Perform. Collaborate.</p>
                     </div>
                 </div>

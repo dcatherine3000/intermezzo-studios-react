@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <footer>
+            <hr />
             <Container>
                 <Row>
                     <div className="col-12 footer-nav">

@@ -18,7 +18,7 @@ function HomeInfo(props) {
 
     const info = props.model.map(model => {
         return (
-            <div key={model.id} className="col-md-4">
+            <div key={model.id} className="col-lg-4">
                 <RenderModel model={model} />
             </div>
         );
@@ -27,8 +27,8 @@ function HomeInfo(props) {
     return (
         <Container>
             <Row>
-                <div className="model-header">
-                    <h2 className="display-4">Our Model</h2>
+                <div className="col-md-12 model-header">
+                    <h2 className="header-font"><strong>Our Model</strong></h2>
                     <p>We strive to create a thriving musical community by providing everything necessary for musicians to thrive, grow, and connect with other artists.</p>
                 </div>
             </Row>

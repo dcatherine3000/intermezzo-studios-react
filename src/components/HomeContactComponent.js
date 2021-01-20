@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 
 function HomeContact() {
     return (
-        <div>
-            <Button dark block className="home-button btn-lg" href='/contact'>Contact Us</Button>
+        <div className="col text-center">
+            <button className="btn btn-dark btn-lg home-button active"><Link className="home-link" to='/contact'>Contact Us</Link></button>
         </div>
     );
 }

@@ -22,8 +22,8 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar dark className="bg-dark" expand="lg" fixed="top">
-                    <NavbarBrand href="/">
+                <Navbar className="navbar navbar-dark" expand="lg" fixed="top">
+                    <NavbarBrand href='/'>
                         <h1>Intermezzo Studios</h1>
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
