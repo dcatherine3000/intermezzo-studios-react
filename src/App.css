@@ -138,7 +138,7 @@ footer hr {
 /* About Page */
 
 .flex-column {
-  border: dotted rgba(0,0,0,0.5) 2px;
+  border: double rgba(0,0,0,0.5) 5px;
   padding: 1.25rem;
   width: 50%;
   position: relative;

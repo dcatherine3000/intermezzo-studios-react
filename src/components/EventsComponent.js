@@ -46,7 +46,7 @@ function Events() {
                     </tbody>
                 </Table>
                 <Row id="events-button" className="btn-block text-center">
-                    <Button dark>Questions?</Button>
+                    <Button active className="btn-dark btn-lg">Questions?</Button>
                 </Row>
             </Container>
         </div>
