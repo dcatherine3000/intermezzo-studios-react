@@ -14,6 +14,7 @@ import Rentals from './RentalsComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { MODEL } from '../shared/model';
 import { QUESTIONS } from '../shared/questions';
+import { EVENTS } from '../shared/events';
 
 class Main extends Component {
     constructor(props) {
@@ -21,7 +22,8 @@ class Main extends Component {
 
         this.state = {
             model: MODEL,
-            questions: QUESTIONS
+            questions: QUESTIONS,
+            events: EVENTS
         }
     }
 
@@ -49,7 +51,7 @@ class Main extends Component {
                     <Route exact path='/about/team' component={Team} />
                     <Route exact path='/about/lessons' component={Lessons} />
                     <Route exact path='/about/rentals' component={Rentals} />
-                    <Route exact path='/events' component={Events} />
+                    <Route exact path='/events' render={() => <Events events={this.state.events} />} />
                     <Route exact path='/faq' component={FaqPage} />
                     <Route exact path='/contact' component={Contact} />
                     <Redirect to='/home' />

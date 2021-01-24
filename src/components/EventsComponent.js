@@ -2,7 +2,26 @@ import React from 'react';
 import { Container, Row, Breadcrumb, BreadcrumbItem, Table, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function Events() {
+function RenderEvents({event}) {
+    return (
+        <tbody key={event.id}>
+            <tr>
+                <td colSpan="6"><strong>{event.name}</strong></td>
+                <td>{event.date}</td>
+                <td>{event.price}</td>
+            </tr>
+        </tbody>
+    );
+}
+
+function Events(props) {
+
+    const table = props.events.map(event => {
+        return (
+            <RenderEvents event={event} />
+        );
+    });
+
     return (
         <div>
             <Container>
@@ -14,7 +33,7 @@ function Events() {
                         </Breadcrumb>
                     </div>
                 </Row>
-                <Table striped hover>
+                <Table hover>
                     <thead>
                         <tr>
                             <th colSpan="6">Event Name</th>
@@ -22,28 +41,7 @@ function Events() {
                             <th>Price</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td colSpan="6"><strong>Elementary/Intermediate Holiday Recitals</strong></td>
-                            <td>December 12, 2020</td>
-                            <td>Free for families</td>
-                        </tr>
-                        <tr>
-                            <td colSpan="6"><strong>High School Holiday Recitals</strong></td>
-                            <td>December 13, 2020</td>
-                            <td>Free for families</td>
-                        </tr>
-                        <tr>
-                            <td colSpan="6"><strong>An Evening with Nat and Josh</strong></td>
-                            <td>December 19, 2020, 8pm</td>
-                            <td>$10</td>
-                        </tr>
-                        <tr>
-                            <td colSpan="6"><strong>Benson Chamber Singers Christmas Concert</strong></td>
-                            <td>December 20, 2020</td>
-                            <td>$15</td>
-                        </tr>
-                    </tbody>
+                    {table}
                 </Table>
                 <Row id="events-button" className="btn-block text-center">
                     <Button active className="btn-dark btn-lg">Questions?</Button>
